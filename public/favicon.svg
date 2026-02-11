@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64">
+  <g transform="rotate(-8 32 32)">
+    <rect x="4" y="4" width="56" height="56" rx="12" fill="#ffb7c5" stroke="#000" stroke-width="3"/>
+    <text x="50%" y="52%" text-anchor="middle" dominant-baseline="middle"
+          font-family="Baloo, Arial, sans-serif" font-size="36" font-weight="700" fill="#fff">
+      M
+    </text>
+  </g>
+</svg>
