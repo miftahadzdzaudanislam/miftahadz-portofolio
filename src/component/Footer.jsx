@@ -1,3 +1,4 @@
+import { contacts } from "@/utils/contact";
 import { ArrowUpIcon } from "lucide-react";
 import { BsGithub, BsLinkedin } from "react-icons/bs";
 import { MdEmail } from "react-icons/md";
@@ -8,26 +9,19 @@ export default function Footer() {
     <>
       <footer className="bg-base-100 text-neutral-content px-6 md:px-16 py-8 border-t-3">
         <div className="flex flex-col md:flex-row items-center md:items-center justify-between gap-6">
-          {/* Icons on top (mobile), right (md+) */}
           <div className="order-1 md:order-2 flex items-center gap-3">
-            <Link
-              to={"mailto:miftahdzaudan@gmail.com"}
-              className="w-10 h-10 rounded-full bg-primary text-black flex items-center justify-center border-2 border-black shadow-[2px_2px_0_#000] hover:-translate-y-0.5 transition-transform"
-            >
-              <MdEmail size={20} />
-            </Link>
-            <Link
-              to={"https://github.com/miftahadzdzaudanislam"}
-              className="w-10 h-10 rounded-full bg-secondary text-black flex items-center justify-center border-2 border-black shadow-[2px_2px_0_#000] hover:-translate-y-0.5 transition-transform"
-            >
-              <BsGithub size={20} />
-            </Link>
-            <Link
-              to={"https://www.linkedin.com/in/miftah-adz-dzaudan-i-682616293/"}
-              className="w-10 h-10 rounded-full bg-accent text-black flex items-center justify-center border-2 border-black shadow-[2px_2px_0_#000] hover:-translate-y-0.5 transition-transform"
-            >
-              <BsLinkedin size={20} />
-            </Link>
+            {contacts.map((c, index) => {
+              const Icon = c.icon;
+              return (
+                <Link
+                  key={index}
+                  to={c.link}
+                  className={`w-10 h-10 rounded-full text-white flex items-center justify-center border-2 border-black shadow-[2px_2px_0_#000] hover:-translate-y-0.5 transition-transform ${c.color}`}
+                >
+                  <Icon size={20} />
+                </Link>
+              );
+            })}
           </div>
 
           {/* Logo left on md+ */}

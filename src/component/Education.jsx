@@ -4,7 +4,7 @@ export default function Education({ educations = [] }) {
       {educations.map((edu, index) => (
         <div
           key={index}
-          className="rounded-xl bg-white border-2 border-black p-5 shadow-[4px_4px_0_#000] hover:shadow-[2px_2px_0_#000] hover:translate-x-0.5 hover:translate-y-0.5 transition-all"
+          className="rounded-xl bg-white border-2 border-black p-5 shadow-[4px_4px_0_#000] hover:shadow-[2px_2px_0_#000] hover:translate-x-0.5 hover:translate-y-0.5 transition-all group"
         >
           <div className="flex flex-col md:flex-row gap-4 items-start">
             {/* Logo */}
@@ -12,7 +12,7 @@ export default function Education({ educations = [] }) {
               <img
                 src={edu.logo}
                 alt={edu.institution}
-                className="w-20 h-20 object-contain rounded-lg border-2 border-gray-300 p-2 bg-white"
+                className="w-20 h-20 object-contain rounded-xl border-2 border-gray-300 p-2 bg-white transition-transform duration-300 group-hover:scale-105"
               />
             </div>
 

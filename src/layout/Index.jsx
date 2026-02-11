@@ -6,7 +6,9 @@ export default function LayoutPage() {
   return (
     <>
       <Navbar />
-      <Outlet />
+      <div className="hero bg-neutral min-h-screen relative overflow-hidden pt-28 md:pt-32">
+        <Outlet />
+      </div>
       <Footer />
     </>
   );

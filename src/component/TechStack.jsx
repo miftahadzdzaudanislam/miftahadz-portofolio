@@ -1,3 +1,5 @@
+import { BsGearFill } from "react-icons/bs";
+
 export default function TechStack({ groups = [] }) {
   return (
     <div className="grid gap-4">
@@ -6,7 +8,13 @@ export default function TechStack({ groups = [] }) {
           key={group.title}
           className="rounded-xl bg-white border-2 border-black p-5 shadow-[4px_4px_0_#000]"
         >
-          <h2 className="font-bold mb-3 text-xl">{group.title}</h2>
+          <h2 className="flex items-center gap-2 font-bold mb-3 text-2xl font-comic">
+            <BsGearFill
+              className="animate-spin"
+              style={{ animationDuration: "4s" }}
+            />
+            <span>{group.title}</span>
+          </h2>
           <div className="flex flex-wrap gap-3">
             {group.tech.map((t) => {
               const Icon = t.icon;

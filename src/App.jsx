@@ -2,9 +2,9 @@ import NotFound from "@/component/NotFound";
 import LayoutPage from "@/layout/Index";
 import About from "@/pages/About";
 import Contact from "@/pages/Contact";
-import DetailPorject from "@/pages/DetailPorto";
+import DetailPorject from "@/pages/DetailProject";
 import Home from "@/pages/Home";
-import Project from "@/pages/Portofolios";
+import Project from "@/pages/Projects";
 import { Route, Routes } from "react-router-dom";
 
 function App() {
