@@ -1,12 +1,12 @@
 import { BsGithub, BsLinkedin } from "react-icons/bs";
 import { FaInstagram } from "react-icons/fa";
-import { MdEmail } from "react-icons/md";
+import { SiGmail } from "react-icons/si";
 
 export const contacts = [
   {
     social: "Email",
     link: "mailto:miftahdzaudan@gmail.com",
-    icon: MdEmail,
+    icon: SiGmail,
     color: "bg-[#EA4335]",
   },
   {

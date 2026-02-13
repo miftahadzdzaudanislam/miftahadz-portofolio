@@ -1,7 +1,22 @@
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
+import SkeletonCard from "@/skeleton/CardSkeleton";
 
-export default function Card({ projects = [] }) {
+export default function Card({
+  projects = [],
+  loading = false,
+  skeletonCount = 6,
+}) {
+  if (loading) {
+    return (
+      <>
+        {Array.from({ length: skeletonCount }).map((_, i) => (
+          <SkeletonCard key={i} />
+        ))}
+      </>
+    );
+  }
+
   return (
     <>
       {projects.map((p, index) => (

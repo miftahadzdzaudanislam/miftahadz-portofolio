@@ -51,3 +51,17 @@
 .font-comic {
   font-family: "Baloo 2", "cursive";
 }
+
+.prose h1,
+.prose h2,
+.prose h3,
+.prose p,
+.prose ul,
+.prose ol,
+.prose pre {
+  margin: 0 0 2rem;
+}
+
+.prose [class*="blue-50"] p {
+  margin: 0 !important;
+}

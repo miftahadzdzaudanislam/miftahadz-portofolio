@@ -82,7 +82,7 @@ export default function About() {
           </div>
 
           <div className="w-full">
-            <TechStack groups={techSkills} />
+            <TechStack techs={techSkills} />
           </div>
 
           <div className="flex items-center my-16">

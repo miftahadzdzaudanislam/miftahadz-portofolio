@@ -21,7 +21,7 @@ export default function Project() {
         ))}
       </div>
 
-      <div className="hero-content flex-col px-20 pb-20 md:px-30 gap-12 relative">
+      <div className="hero-content flex-col px-10 pb-20 md:px-30 gap-12 relative">
         {/* Header */}
         <div className="w-full max-w-6xl">
           <div className="group flex flex-col md:flex-row items-center md:items-start gap-4 mb-6">

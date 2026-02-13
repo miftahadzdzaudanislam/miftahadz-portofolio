@@ -1,4 +1,20 @@
-export default function Education({ educations = [] }) {
+import SkeletonEdu from "@/skeleton/EduSkeleton";
+
+export default function Education({
+  educations = [],
+  loading = false,
+  skeletonCount = 2,
+}) {
+  if (loading) {
+    return (
+      <>
+        {Array.from({ length: skeletonCount }).map((_, i) => (
+          <SkeletonEdu key={i} />
+        ))}
+      </>
+    );
+  }
+
   return (
     <div className="grid gap-4">
       {educations.map((edu, index) => (

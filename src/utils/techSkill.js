@@ -2,7 +2,6 @@ import { BsGithub } from "react-icons/bs";
 import {
   FaBootstrap,
   FaLaravel,
-  FaPhp,
   FaReact,
   FaHtml5,
   FaCss3Alt,
@@ -21,9 +20,9 @@ import {
   SiJira,
   SiAxios,
   SiVite,
+  SiPhp,
 } from "react-icons/si";
 import { TbApi } from "react-icons/tb";
-import { MdSecurity } from "react-icons/md";
 import { ImOffice } from "react-icons/im";
 
 export const techSkills = [
@@ -31,34 +30,34 @@ export const techSkills = [
     title: "Frontend",
     tech: [
       {
+        techName: "HTML",
+        icon: FaHtml5,
+        colorClass: "bg-[#F97316] text-white",
+      },
+      {
+        techName: "CSS",
+        icon: FaCss3Alt,
+        colorClass: "bg-[#3B82F6] text-white",
+      },
+      {
         techName: "React",
         icon: FaReact,
-        colorClass: "bg-[#61DAFB] text-black",
+        colorClass: "bg-[#38BDF8] text-black",
       },
       {
         techName: "Tailwind CSS",
         icon: RiTailwindCssFill,
-        colorClass: "bg-[#06B6D4] text-white",
+        colorClass: "bg-[#22D3EE] text-black",
       },
       {
         techName: "Bootstrap",
         icon: FaBootstrap,
-        colorClass: "bg-[#7952B3] text-white",
+        colorClass: "bg-[#7C3AED] text-white",
       },
       {
         techName: "JavaScript",
         icon: SiJavascript,
         colorClass: "bg-[#F7DF1E] text-black",
-      },
-      {
-        techName: "HTML",
-        icon: FaHtml5,
-        colorClass: "bg-[#E34F26] text-white",
-      },
-      {
-        techName: "CSS",
-        icon: FaCss3Alt,
-        colorClass: "bg-[#1572B6] text-white",
       },
     ],
   },
@@ -69,11 +68,11 @@ export const techSkills = [
       {
         techName: "Laravel",
         icon: FaLaravel,
-        colorClass: "bg-[#FF2D20] text-white",
+        colorClass: "bg-[#B91C1C] text-white",
       },
       {
         techName: "PHP",
-        icon: FaPhp,
+        icon: SiPhp,
         colorClass: "bg-[#777BB4] text-white",
       },
       {
@@ -84,13 +83,13 @@ export const techSkills = [
       {
         techName: "Node.js",
         icon: FaNodeJs,
-        colorClass: "bg-[#339933] text-white",
+        colorClass: "bg-[#16A34A] text-white",
       },
-      {
-        techName: "Go",
-        icon: SiGo,
-        colorClass: "bg-[#00ADD8] text-white",
-      },
+      //   {
+      //     techName: "Go",
+      //     icon: SiGo,
+      //     colorClass: "bg-[#00ADD8] text-white",
+      //   },
       {
         techName: "REST API",
         icon: TbApi,
@@ -110,13 +109,13 @@ export const techSkills = [
       {
         techName: "MySQL",
         icon: SiMysql,
-        colorClass: "bg-[#4479A1] text-white",
+        colorClass: "bg-gradient-to-r from-[#0E7490] via-[#0E7490] to-[#F97316] text-white",
       },
-      {
-        techName: "MongoDB",
-        icon: SiMongodb,
-        colorClass: "bg-[#47A248] text-white",
-      },
+      //   {
+      //     techName: "MongoDB",
+      //     icon: SiMongodb,
+      //     colorClass: "bg-[#47A248] text-white",
+      //   },
     ],
   },
 
@@ -128,11 +127,11 @@ export const techSkills = [
         icon: BsGithub,
         colorClass: "bg-[#181717] text-white",
       },
-      {
-        techName: "Docker",
-        icon: FaDocker,
-        colorClass: "bg-[#2496ED] text-white",
-      },
+      //   {
+      //     techName: "Docker",
+      //     icon: FaDocker,
+      //     colorClass: "bg-[#2496ED] text-white",
+      //   },
       {
         techName: "Postman",
         icon: SiPostman,

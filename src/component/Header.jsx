@@ -14,8 +14,8 @@ export default function Navbar() {
 
   return (
     <>
-      <div className="bg-base-100 top-0 left-0 right-0 fixed z-10 m-4 rounded-full border-2 md:mx-30 md:shadow-[6px_6px_0_#000]">
-        <div className="navbar w-full justify-between">
+      <div className="md:px-30 p-4 fixed top-0 left-0 right-0 z-10">
+        <div className="navbar w-full justify-between bg-base-100 rounded-full border-2 md:shadow-[6px_6px_0_#000]">
           <div className="navbar-start">
             <Link to={"#"} className="text-2xl font-bold px-6 font-comic">
               MiftahAdz
