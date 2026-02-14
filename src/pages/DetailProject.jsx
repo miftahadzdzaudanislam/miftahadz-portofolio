@@ -5,11 +5,10 @@ import { ArrowLeft, ExternalLink } from "lucide-react";
 import { BsGearFill, BsGithub } from "react-icons/bs";
 import { lazy, Suspense } from "react";
 
-const ProjectMarkdown = lazy(() => import("@/component/Markdown"));
-
 export default function DetailPorject() {
   const { slug } = useParams();
   const data = projects.find((p) => p.link === slug);
+  const ProjectMarkdown = lazy(() => import("@/component/Markdown"));
 
   if (!data) {
     return <NotFound />;
@@ -22,23 +21,28 @@ export default function DetailPorject() {
       <div className="pointer-events-none absolute top-32 -right-20 w-64 h-64 rounded-full bg-accent/30 blur-3xl animate-pulse" />
 
       <div className="hero-content flex-col pb-20 pt-0 md:px-15 gap-8 relative w-full max-w-5xl">
-        {/* Image */}
         <div className="w-full bg-white/90 backdrop-blur p-3 shadow-xl rounded-xl border-2 border-black/10">
           {/* Back Button */}
-          <div className="w-full py-2">
+          <div className="flex flex-col w-full py-2 gap-2">
             <Link
               to="/projects"
-              className="inline-flex items-center text-2xl gap-2 font-bold font-comic py-3 px-5 rounded-2xl hover:bg-gray-100"
+              className="w-fit inline-flex items-center text-lg gap-2 font-bold font-comic py-3 px-4 rounded-2xl hover:bg-gray-100 group"
             >
-              <ArrowLeft size={25} />
-              Back
+              <ArrowLeft
+                size={25}
+                className="transition-all group-hover:-translate-x-0.5"
+              />
+              Back to projects
             </Link>
+            <div className="flex w-full">
+              {/* Image */}
+              <img
+                src={data.img}
+                alt={data.title}
+                className="w-full items-center object-cover transition-all duration-300 rounded-3xl"
+              />
+            </div>
           </div>
-          <img
-            src={data.img}
-            alt={data.title}
-            className="w-full object-cover transition-all duration-300 rounded-3xl"
-          />
 
           {/* Content */}
           <div className="p-5">
@@ -81,26 +85,28 @@ export default function DetailPorject() {
                   </div>
                 </div>
                 <div className="flex flex-row gap-2 md:w-1/2  md:justify-end">
-                  <Link
-                    to={data.github}
-                    target="_blank"
-                    className="flex items-center gap-2"
-                  >
-                    <BsGithub size={30} />
-                    <span>Source Code</span>
-                  </Link>
+                  {data.github ? (
+                    <Link
+                      to={data.github}
+                      target="_blank"
+                      className="flex items-center gap-2"
+                    >
+                      <BsGithub size={30} />
+                      <span>Source Code</span>
+                    </Link>
+                  ) : null}
+                  {data.github && data.website ? (
+                    <span className="text-gray-300 text-3xl">|</span>
+                  ) : null}
                   {data.website ? (
-                    <>
-                      <span className="text-gray-300 text-3xl">|</span>
-                      <Link
-                        to={data.website}
-                        target="_blank"
-                        className="flex items-center gap-2"
-                      >
-                        <ExternalLink size={30} />
-                        <span>Live Demo</span>
-                      </Link>
-                    </>
+                    <Link
+                      to={data.website}
+                      target="_blank"
+                      className="flex items-center gap-2"
+                    >
+                      <ExternalLink size={30} />
+                      <span>Live Demo</span>
+                    </Link>
                   ) : null}
                 </div>
               </div>
@@ -108,7 +114,7 @@ export default function DetailPorject() {
 
             {/* MDX */}
             {data.content ? (
-              <div className="p-2 prose max-w-none">
+              <div className="p-2 prose max-w-none overflow-x-auto wrap-break-word">
                 <div className="flex items-center my-6">
                   <div className="flex-1 h-0.5 bg-black"></div>
 

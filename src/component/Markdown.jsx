@@ -7,7 +7,7 @@ export default function ProjectMarkdown({ content }) {
       <Markdown
         components={{
           pre: ({ children }) => (
-            <pre className="bg-zinc-900 text-zinc-100 p-4 rounded-xl overflow-x-auto whitespace-pre-wrap wrap-break-words">
+            <pre className="bg-zinc-900 text-zinc-100 p-4 rounded-xl overflow-x-auto whitespace-pre-wrap wrap-break-words break-all">
               {children}
             </pre>
           ),

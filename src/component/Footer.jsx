@@ -1,7 +1,5 @@
 import { contacts } from "@/utils/contact";
 import { ArrowUpIcon } from "lucide-react";
-import { BsGithub, BsLinkedin } from "react-icons/bs";
-import { MdEmail } from "react-icons/md";
 import { Link } from "react-router-dom";
 
 export default function Footer() {
@@ -16,9 +14,9 @@ export default function Footer() {
                 <Link
                   key={index}
                   to={c.link}
-                  className={`w-10 h-10 rounded-full text-white flex items-center justify-center border-2 border-black shadow-[2px_2px_0_#000] hover:-translate-y-0.5 transition-transform ${c.color}`}
+                  className={`w-9 h-9 rounded-full text-white flex items-center justify-center border-2 border-black shadow-[2px_2px_0_#000] hover:-translate-y-0.5 transition-transform ${c.color}`}
                 >
-                  <Icon size={20} />
+                  <Icon size={17} />
                 </Link>
               );
             })}
@@ -27,14 +25,19 @@ export default function Footer() {
           {/* Logo left on md+ */}
           <aside className="order-2 md:order-1 flex flex-col gap-2 w-full items-center md:items-start">
             <div className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-xl bg-primary text-white flex items-center justify-center font-comic font-bold text-xl border-2 border-black -rotate-6">
+              <div className="w-9 h-9 rounded-xl bg-primary text-white flex items-center justify-center font-comic font-bold text-lg border-2 border-black -rotate-6">
                 M
               </div>
-              <p className="font-bold text-xl">MiftahAdz</p>
+              <p className="font-extrabold text-lg">MiftahAdz</p>
             </div>
-            <p className="italic text-gray-600 pt-2">
-              Made with love © {new Date().getFullYear()} - All right reserved
-            </p>
+            <div className="pt-1 text-center md:text-start">
+              <p className="italic text-gray-600 text-sm">
+                Made with love © {new Date().getFullYear()} - All right reserved
+              </p>
+              <p className="italic text-gray-600 text-sm">
+                Built with React & Tailwind
+              </p>
+            </div>
           </aside>
         </div>
 

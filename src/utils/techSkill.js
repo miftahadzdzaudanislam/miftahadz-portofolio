@@ -21,6 +21,7 @@ import {
   SiAxios,
   SiVite,
   SiPhp,
+  SiGit,
 } from "react-icons/si";
 import { TbApi } from "react-icons/tb";
 import { ImOffice } from "react-icons/im";
@@ -42,7 +43,7 @@ export const techSkills = [
       {
         techName: "React",
         icon: FaReact,
-        colorClass: "bg-[#38BDF8] text-black",
+        colorClass: "bg-[#61DAFD] text-black",
       },
       {
         techName: "Tailwind CSS",
@@ -76,6 +77,11 @@ export const techSkills = [
         colorClass: "bg-[#777BB4] text-white",
       },
       {
+        techName: "MySQL",
+        icon: SiMysql,
+        colorClass: "bg-gradient-to-r from-[#0E7490] via-[#0E7490] to-[#F97316] text-white",
+      },
+      {
         techName: "Express.js",
         icon: SiExpress,
         colorClass: "bg-[#000000] text-white",
@@ -103,21 +109,21 @@ export const techSkills = [
     ],
   },
 
-  {
-    title: "Database",
-    tech: [
-      {
-        techName: "MySQL",
-        icon: SiMysql,
-        colorClass: "bg-gradient-to-r from-[#0E7490] via-[#0E7490] to-[#F97316] text-white",
-      },
-      //   {
-      //     techName: "MongoDB",
-      //     icon: SiMongodb,
-      //     colorClass: "bg-[#47A248] text-white",
-      //   },
-    ],
-  },
+//   {
+//     title: "Database",
+//     tech: [
+//       {
+//         techName: "MySQL",
+//         icon: SiMysql,
+//         colorClass: "bg-gradient-to-r from-[#0E7490] via-[#0E7490] to-[#F97316] text-white",
+//       },
+//       //   {
+//       //     techName: "MongoDB",
+//       //     icon: SiMongodb,
+//       //     colorClass: "bg-[#47A248] text-white",
+//       //   },
+//     ],
+//   },
 
   {
     title: "DevOps & Tools",
@@ -126,6 +132,11 @@ export const techSkills = [
         techName: "Github",
         icon: BsGithub,
         colorClass: "bg-[#181717] text-white",
+      },
+      {
+        techName: "Git",
+        icon: SiGit,
+        colorClass: "bg-[#F05033] text-white",
       },
       //   {
       //     techName: "Docker",
@@ -148,11 +159,11 @@ export const techSkills = [
         icon: SiJira,
         colorClass: "bg-[#0052CC] text-white",
       },
-      {
-        techName: "Microsoft Office",
-        icon: ImOffice,
-        colorClass: "bg-[#D83B01] text-white",
-      },
+    //   {
+    //     techName: "Microsoft Office",
+    //     icon: ImOffice,
+    //     colorClass: "bg-[#D83B01] text-white",
+    //   },
     ],
   },
 ];
